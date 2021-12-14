@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write \"components/**/*.{js,tsx}\"",
-    "lint": "next lint"
+    "lint": "eslint \"components/**/*.{js,tsx}\" --quiet"
   },
   "dependencies": {
     "next": "12.0.7",
