@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // auth validation middleware
 import jwt from "jsonwebtoken";
 import prisma from "./prisma";
