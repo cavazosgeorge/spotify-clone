@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import GradientLayout from "../../components/gradientLayout";
 import { validateToken } from "../../lib/auth";
 import prisma from "../../lib/prisma";
@@ -36,11 +37,23 @@ const Playlist = ({ playlist }) => {
 };
 
 export const getServerSideProps = async ({ query, req }) => {
-  const { id } = validateToken(req.cookies.TRAX_ACCESS_TOKEN);
+  let user;
+  // no token redirect error validation
+  try {
+    user = validateToken(req.cookies.TRAX_ACCESS_TOKEN);
+  } catch (err) {
+    return {
+      redirect: {
+        permanent: false,
+        path: "/signin",
+      },
+    };
+  }
+
   const [playlist] = await prisma.playlist.findMany({
     where: {
       id: +query.id,
-      userId: id,
+      userId: user.id,
     },
     include: {
       songs: {
