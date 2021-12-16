@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Box } from "@chakra-ui/layout";
 import Sidebar from "./sidebar";
-import PlayerBar from "../components/playerBar";
+import PlayerBar from "./playerBar";
 
 const PlayerLayout = ({ children }) => {
   return (
