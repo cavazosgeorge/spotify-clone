@@ -8,7 +8,7 @@ import { auth } from "../lib/mutations";
 const AuthForm = ({ mode }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   const handleSubmit = async (e) => {
