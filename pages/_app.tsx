@@ -1,4 +1,17 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  extendTheme,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  Button,
+  ModalCloseButton,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { StoreProvider } from "easy-peasy";
 import PlayerLayout from "../components/playerLayout";
 import "reset-css";

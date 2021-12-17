@@ -1,9 +1,10 @@
-import { Box, Flex, Input, Button } from "@chakra-ui/react";
+import { Box, Flex, Spacer, Input, Button } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useSWRConfig } from "swr";
 import NextImage from "next/image";
 import { auth } from "../lib/mutations";
+import BasicModal from "../components/modal";
 
 const AuthForm = ({ mode }) => {
   const [email, setEmail] = useState("");
@@ -43,18 +44,24 @@ const AuthForm = ({ mode }) => {
               type="password"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Button
-              type="submit"
-              bg="green.500"
-              isLoading={isLoading}
-              sx={{
-                "&:hover": {
-                  bg: "green.300",
-                },
-              }}
-            >
-              {mode}
-            </Button>
+            <Box>
+              <Flex>
+                <Button
+                  type="submit"
+                  bg="green.500"
+                  isLoading={isLoading}
+                  sx={{
+                    "&:hover": {
+                      bg: "green.300",
+                    },
+                  }}
+                >
+                  {mode}
+                </Button>
+                <Spacer />
+                <BasicModal />
+              </Flex>
+            </Box>
           </form>
         </Box>
       </Flex>
