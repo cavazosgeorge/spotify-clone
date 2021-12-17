@@ -32,7 +32,7 @@ const AuthForm = ({ mode }) => {
         <NextImage src="/logo.svg" height={60} width={120} />
       </Flex>
       <Flex justify="center" align="center" height="calc(100vh - 100px">
-        <Box padding="50px" bg="gray.900" borderRadius="6px">
+        <Box marginTop="30px" padding="50px" bg="gray.900" borderRadius="6px">
           <form onSubmit={handleSubmit}>
             <Input
               placeholder="email"
