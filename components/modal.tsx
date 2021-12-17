@@ -47,7 +47,16 @@ function BasicModal() {
             <p>Sign in to start listening: user@test.com | password</p>
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button
+              bg="green.500"
+              color="white"
+              onClick={onClose}
+              sx={{
+                "&:hover": {
+                  bg: "green.300",
+                },
+              }}
+            >
               Close
             </Button>
           </ModalFooter>
