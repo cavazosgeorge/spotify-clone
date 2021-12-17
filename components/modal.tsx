@@ -25,7 +25,7 @@ function BasicModal() {
           },
         }}
       >
-        click me instead{" "}
+        Click me instead{" "}
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>

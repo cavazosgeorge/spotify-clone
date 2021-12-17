@@ -35,12 +35,13 @@ const AuthForm = ({ mode }) => {
         <Box marginTop="30px" padding="50px" bg="gray.900" borderRadius="6px">
           <form onSubmit={handleSubmit}>
             <Input
-              placeholder="email"
+              placeholder="Enter email"
               type="email"
               onChange={(e) => setEmail(e.target.value)}
             />
             <Input
-              placeholder="password"
+              marginTop="10px"
+              placeholder="Password"
               type="password"
               onChange={(e) => setPassword(e.target.value)}
             />

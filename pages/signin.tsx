@@ -1,7 +1,7 @@
 import AuthForm from "../components/authForm";
 
 const Signin = () => {
-  return <AuthForm mode="sign in" />;
+  return <AuthForm mode="Sign in" />;
 };
 
 Signin.authPage = true;
