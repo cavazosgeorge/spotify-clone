@@ -44,7 +44,7 @@ const AuthForm = ({ mode }) => {
               type="password"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Box>
+            <Box marginTop="10px">
               <Flex>
                 <Button
                   type="submit"
